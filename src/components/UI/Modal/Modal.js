@@ -5,13 +5,14 @@ import Backdrop from '../Backdrop/Backdrop';
 
 class Modal extends Component{
     shouldComponentUpdate(nextProps, nextState){
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
     componentWillUpdate(){
         console.log('[Modal] WillUpdate');
     }
     render(){
-        return(<Auxiliry>
+        return(
+        <Auxiliry>
             <Backdrop show={this.props.show}  clicked={this.props.modalClosed}/>
              <div 
                  className={classes.Modal}
@@ -20,6 +21,7 @@ class Modal extends Component{
                      opacity: this.props.show ? '1' : '0'
                  }}
                  >
+                
                  {this.props.children}
              </div>
          </Auxiliry> 

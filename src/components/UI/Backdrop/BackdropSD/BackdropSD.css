@@ -1,4 +1,4 @@
-.Backdrop{
+.BackdropSD{
     width: 100%;
     height: 100%;
     position: fixed;
@@ -7,9 +7,9 @@
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
-/* @media (min-width:500px){
-    .Backdrop{
-        display: none;
-    }
-} */
 
+@media (min-width: 500px) {
+    .BackdropSD{
+       display: none;
+    }
+}
